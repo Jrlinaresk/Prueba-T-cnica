@@ -1,0 +1,38 @@
+buildscript {
+    ext {
+        version_code = 1
+        version_name = '1'
+    }
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+    }
+    allprojects {
+        repositories {
+            maven { url 'https://maven.google.com' }
+            mavenCentral()
+            jcenter()
+            maven { url "https://jitpack.io" }
+            google()
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.3.1'
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url 'https://maven.google.com' }
+        maven { url "https://jitpack.io" }
+
+        google()
+        jcenter()
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

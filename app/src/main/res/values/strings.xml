@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Examen técnico</string>
+
+    <string name="estado_aprobado">Aprobado</string>
+    <string name="estado_rechazado">Rechazado</string>
+    <string name="estado_saldo_insuficiente">"Saldo insuficiente"</string>
+    <string name="estado_error_de_comunicación">Error de comunicación</string>
+
+</resources>
