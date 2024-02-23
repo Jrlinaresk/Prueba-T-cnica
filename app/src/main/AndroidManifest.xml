@@ -3,13 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <permission android:name="com.example.prueba_tegnica.permission.C2D_MESSAGE"
                 android:protectionLevel="signature" />
     <uses-permission android:name="com.example.prueba_tegnica.permission.C2D_MESSAGE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-
+    <!-- orentado a android 13 -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
 
     <application
@@ -23,7 +23,7 @@
         android:usesCleartextTraffic="true"
         tools:replace="android:allowBackup"
         android:theme="@style/Theme.Prueba_tegnica"
-        tools:targetApi="tiramisu">
+        >
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -33,7 +33,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
-            <!-- Mueve este bloque dentro de la actividad -->
             <intent-filter>
                 <action android:name="com.example.prueba_tegnica.ACCION_NOTIFICACION_PUSH"/>
                 <category android:name="android.intent.category.NOTIFICACION"/>
